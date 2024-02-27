@@ -1,0 +1,29 @@
+function RTW_rtwnameSIDMap() {
+	this.rtwnameHashMap = new Array();
+	this.sidHashMap = new Array();
+	this.rtwnameHashMap["<Root>"] = {sid: "IncCounter"};
+	this.sidHashMap["IncCounter"] = {rtwname: "<Root>"};
+	this.rtwnameHashMap["<S1>"] = {sid: "IncCounter:14"};
+	this.sidHashMap["IncCounter:14"] = {rtwname: "<S1>"};
+	this.rtwnameHashMap["<Root>/Input"] = {sid: "IncCounter:12"};
+	this.sidHashMap["IncCounter:12"] = {rtwname: "<Root>/Input"};
+	this.rtwnameHashMap["<Root>/Subsystem"] = {sid: "IncCounter:14"};
+	this.sidHashMap["IncCounter:14"] = {rtwname: "<Root>/Subsystem"};
+	this.rtwnameHashMap["<Root>/Output"] = {sid: "IncCounter:13"};
+	this.sidHashMap["IncCounter:13"] = {rtwname: "<Root>/Output"};
+	this.rtwnameHashMap["<S1>/In1"] = {sid: "IncCounter:15"};
+	this.sidHashMap["IncCounter:15"] = {rtwname: "<S1>/In1"};
+	this.rtwnameHashMap["<S1>/Constant1"] = {sid: "IncCounter:5"};
+	this.sidHashMap["IncCounter:5"] = {rtwname: "<S1>/Constant1"};
+	this.rtwnameHashMap["<S1>/Subtract"] = {sid: "IncCounter:11"};
+	this.sidHashMap["IncCounter:11"] = {rtwname: "<S1>/Subtract"};
+	this.rtwnameHashMap["<S1>/Switch"] = {sid: "IncCounter:3"};
+	this.sidHashMap["IncCounter:3"] = {rtwname: "<S1>/Switch"};
+	this.rtwnameHashMap["<S1>/Unit Delay"] = {sid: "IncCounter:7"};
+	this.sidHashMap["IncCounter:7"] = {rtwname: "<S1>/Unit Delay"};
+	this.rtwnameHashMap["<S1>/Out1"] = {sid: "IncCounter:16"};
+	this.sidHashMap["IncCounter:16"] = {rtwname: "<S1>/Out1"};
+	this.getSID = function(rtwname) { return this.rtwnameHashMap[rtwname];}
+	this.getRtwname = function(sid) { return this.sidHashMap[sid];}
+}
+RTW_rtwnameSIDMap.instance = new RTW_rtwnameSIDMap();
